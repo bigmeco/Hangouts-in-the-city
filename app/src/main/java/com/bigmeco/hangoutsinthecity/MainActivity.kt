@@ -14,8 +14,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
     fun  onClickChat(view: View) {
+        transitionFragment(ChatFragment())
+
     }
     fun  onClickUser(view: View) {
         transitionFragment(UserFragment())
