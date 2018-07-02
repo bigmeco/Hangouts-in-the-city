@@ -1,26 +1,28 @@
 package com.bigmeco.hangoutsinthecity
 
-import android.support.v7.app.AppCompatActivity
+import android.app.Fragment
 import android.os.Bundle
-import org.jetbrains.anko.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
+import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
-        if (false) {
-            MyActivityUI({}).setContentView(this)
+        setContentView(R.layout.activity_main)
+        //transitionFragment(MapsFragment())
 
-        } else {
-            MyActivityUI2().setContentView(this)
-        }
+    }
 
+    private fun transitionFragment(newFragment: Fragment) {
+        val ft = fragmentManager.beginTransaction()
+        ft.replace(R.id.fragments, newFragment)
+        ft.commit()
 
-
-}
+    }
 }
 
 
