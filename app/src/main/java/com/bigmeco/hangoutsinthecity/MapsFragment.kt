@@ -16,6 +16,10 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener
+
+
 
 class MapsFragment : Fragment(), OnMapReadyCallback {
 
@@ -91,5 +95,12 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                 .title("Apple"))
 
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(37.4233438, -122.0728817), 10f))
+
+        googleMap.setOnInfoWindowClickListener { marker ->
+            val intent1 = Intent(activity, FullInfoActivity::class.java)
+            val title = marker.title
+            intent1.putExtra("markertitle", title)
+            startActivity(intent1)
+        }
     }
 }

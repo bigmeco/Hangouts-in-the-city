@@ -59,11 +59,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     }
 
+    override fun onPause() {
+        super.onPause()
+        mSensorManager!!.unregisterListener(this)
+    }
 
     override fun onResume() {
         super.onResume()
-
-        //Устанавливаем слушателя ориентации сенсора
         mSensorManager!!.registerListener(this, mSensorManager!!.getDefaultSensor(Sensor.TYPE_ORIENTATION),
                 SensorManager.SENSOR_DELAY_GAME)
     }
