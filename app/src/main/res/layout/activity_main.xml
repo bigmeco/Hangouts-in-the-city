@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,14 +16,14 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="58dp"
+        android:layout_height="60dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:orientation="horizontal"
@@ -39,7 +40,8 @@
             android:layout_weight="1"
             android:foregroundGravity="center"
             android:onClick="onClickChat"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:padding="10dp"
+            app:srcCompat="@drawable/chat" />
 
         <Space
             android:layout_width="match_parent"
@@ -52,14 +54,15 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onClickUser"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:padding="10dp"
+            app:srcCompat="@drawable/user" />
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addChat"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:clickable="true"
@@ -67,7 +70,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@drawable/maps" />
 
     <View
         android:id="@+id/divider"

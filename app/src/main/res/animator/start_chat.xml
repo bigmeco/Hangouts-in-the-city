@@ -1,0 +1,24 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Перед вращением выставляем alpha в 0. -->
+<objectAnimator
+    android:valueFrom="1.0"
+    android:valueTo="0.8"
+    android:propertyName="alpha"
+    android:duration="100" />
+
+<!-- Вращаем. -->
+<objectAnimator
+    android:valueFrom="1100"
+    android:valueTo="0"
+    android:propertyName="translationX"
+    android:interpolator="@android:interpolator/accelerate_decelerate"
+    android:duration="@android:integer/config_mediumAnimTime" />
+
+<!-- На половине пути (смотри startOffset), устанавливаем alpha в 1. -->
+<objectAnimator
+    android:valueFrom="0.8"
+    android:valueTo="1.0"
+    android:propertyName="alpha"
+    android:startOffset="1"
+    android:duration="@android:integer/config_mediumAnimTime" />
+</set>
