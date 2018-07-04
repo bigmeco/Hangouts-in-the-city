@@ -19,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="В работе2"
-            android:textAlignment="center" />
+            android:text="В работе юзер"
+            android:textAlignment="center"
+            android:textSize="30sp" />
     </android.support.v7.widget.CardView>
 </FrameLayout>
