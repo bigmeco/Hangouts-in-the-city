@@ -1,5 +1,7 @@
 package com.bigmeco.hangoutsinthecity
 
+import android.app.Fragment
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintSet
@@ -16,20 +18,24 @@ class FullInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_full_info)
+        transitionFragment(InfoFragment())
 
 
     }
 
 
+    fun onClickBeck(view: View) {
+        finish()
+    }
+
     fun onClickChat(view: View) {
         val set = ConstraintSet()
         removeTabColor(buttonChat)
-
-
         set.clone(parentButtonView)
         onReportLayout(set)
         TransitionManager.beginDelayedTransition(parentButtonView)
         set.applyTo(parentButtonView)
+        transitionFragment(ChatLocalFragment())
     }
 
     fun onClickInfo(view: View) {
@@ -39,9 +45,17 @@ class FullInfoActivity : AppCompatActivity() {
         onListLayout(set)
         TransitionManager.beginDelayedTransition(parentButtonView)
         set.applyTo(parentButtonView)
+        transitionFragment(InfoFragment())
     }
 
 
+    private fun transitionFragment(fragment: Fragment) {
+
+        val ft = fragmentManager.beginTransaction()
+        ft.replace(R.id.fragment, fragment)
+        ft.commit()
+
+    }
 
     private fun onListLayout(set: ConstraintSet) {
         set.clear(R.id.dividerHorizontal, ConstraintSet.START)
