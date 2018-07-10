@@ -52,13 +52,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = mAuth!!.currentUser
-        updateUI(currentUser)
-    }
-
 
     private fun signIn() {
         val signInIntent = mGoogleSignInClient!!.signInIntent

@@ -12,7 +12,6 @@ class SplashActivity: AppCompatActivity() {
     private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // убедитесь, что вызываете до super.onCreate()
         setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
         mAuth = FirebaseAuth.getInstance()
@@ -23,9 +22,8 @@ class SplashActivity: AppCompatActivity() {
 
 
     private fun routeToAppropriatePage(user: FirebaseUser?) {
-        // пример перенаправления
         when (user) {
-            null -> startActivity(Intent(this, LoginActivity::class.java))
+            null -> startActivity(Intent(this, MainActivity::class.java))
             else ->  startActivity(Intent(this, MainActivity::class.java))
         }
     }

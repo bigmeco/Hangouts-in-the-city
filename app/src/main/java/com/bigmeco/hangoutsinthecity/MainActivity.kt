@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     fun onClickChat(view: View) {
         val ft = fragmentManager.beginTransaction()
-        ft.setCustomAnimations(R.animator.start_chat,
-                R.animator.end_chat)
+        ft.setCustomAnimations(R.animator.start_user,
+                R.animator.end_user)
         ft.replace(R.id.fragments, ChatFragment())
         ft.commit()
 
@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     fun onClickUser(view: View) {
         val ft = fragmentManager.beginTransaction()
-        ft.setCustomAnimations(R.animator.start_user,
-                R.animator.end_user)
+        ft.setCustomAnimations(R.animator.start_chat,
+                R.animator.end_chat)
         ft.replace(R.id.fragments, UserFragment())
         ft.commit()
     }
