@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "914570616888",
+    "firebase_url": "https://hangoutsinthecity.firebaseio.com",
+    "project_id": "hangoutsinthecity",
+    "storage_bucket": "hangoutsinthecity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914570616888:android:97edcdf738773720",
+        "android_client_info": {
+          "package_name": "com.bigmeco.hangoutsinthecity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914570616888-ormr0n5c3qaj9g230su3jn7sg0jei2n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg_gFLueklPFFfKK5Q7gDoUy7gWjwv7C8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

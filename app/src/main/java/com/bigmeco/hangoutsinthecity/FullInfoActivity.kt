@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import com.bigmeco.hangoutsinthecity.R.id.buttonChat
 import kotlinx.android.synthetic.main.activity_full_info.*
 
 class FullInfoActivity : AppCompatActivity() {
